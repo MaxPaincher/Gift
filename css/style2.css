@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, pink, lightblue, white);
+}
+
+#cinn img {
+    max-width: 100%;
+    height: auto;
+}
+
+#cinn2 {
+    position: absolute;
+    width: 200px;
+    bottom: 540px;
+    left: 350px;
+    transform: rotate(220deg); /* Rota la imagen 220 grados */
+    transition: transform 0.5s ease; /* Suave animación */
+}
+
+#cinn3{
+    position: absolute;
+    width: 200px;
+    bottom: 0px;
+    right: 380px;
+    transform: rotate(40deg); /* Rota la imagen 220 grados */
+    transition: transform 0.5s ease; /* Suave animación */
+}
+
+.jump {
+    animation: jump 0.5s forwards; /* Añade la animación de salto */
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0) translateX(0) rotate(220deg); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-50px) translateX(-100px) rotate(220deg); /* Salto hacia arriba y a la izquierda */
+    }
+    100% {
+        transform: translateY(0) translateX(-100px) rotate(220deg); /* Regresa a la posición final */
+    }
+}
+
+.hidden {
+    display: none; /* Oculta el elemento */
+}
+
+#message {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    background: rgba(255, 105, 180, 0.8);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: opacity 1s ease; /* Cambia a 1 segundo para el efecto */
+    opacity: 0; /* Inicia oculto */
+}
+
+#message.visible {
+    opacity: 1; /* Aparece cuando se activa */
+}
+
+#message.hidden {
+    opacity: 0; /* Se desvanece al ocultarse */
+    pointer-events: none; /* Evita la interacción cuando está oculto */
+}
+.slide-in {
+    animation: slideIn 0.5s forwards; /* Añade la animación de deslizamiento */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100px); /* Desde abajo */
+    }
+    100% {
+        transform: translateY(0); /* Regresa a la posición final */
+    }
+}
+
+.hidden {
+    display: none; /* Oculta el elemento */
+}
