@@ -90,3 +90,14 @@ body {
 .hidden {
     display: none; /* Oculta el elemento */
 }
+#correo {
+    position: absolute;
+    top: -100px; /* Empieza fuera de la pantalla */
+    animation: bajar 1s forwards; /* Animación al cargar */
+}
+
+@keyframes bajar {
+    to {
+        top: 200px; /* Posición final */
+    }
+}
